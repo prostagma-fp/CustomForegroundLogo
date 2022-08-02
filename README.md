@@ -1,0 +1,2 @@
+# CustomForegroundLogo
+Flashpoint theme.
