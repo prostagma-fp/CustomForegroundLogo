@@ -1,0 +1,52 @@
+/*
+  ==Theme==
+  @name              Custom Foreground Logo
+  @version           0.1
+  @description       Adds a foreground to the logo of games.
+  @author            prostagma
+  @launcher-version  11
+  ==/Theme==
+*/
+
+
+/*
+  Import another theme (optional).
+  To enable it, copy or ovewrite the following code then replace "Metal" with the name of the folder the other theme is in.
+  Note: The URL is case sensitive! You must use the same capitalization as the folders and files!
+*/
+@import url('/Themes/Metal/theme.css');
+
+:root {
+  --game-grid-item__foreground__image-url: url('foreground.png');
+}
+
+.game-grid-item__thumb__icons {
+  /* Set the background image */
+  background: var(--game-grid-item__foreground__image-url);
+  height: 100%;
+
+  /*
+	  Choose one of the following scaling methods.
+	  You do so by "uncommenting" it. This means removing the slash (/) and star (*) symbols before and after the code.
+  */
+
+  /* 1. Fill (fill the entire screen with the image and crop it if it is too large) */
+  /*
+  background-repeat: no-repeat;
+  background-size: cover;
+  */
+
+  /* 2. Fit (make the image as large as possible in the center of the window, display a single color around it) */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  /* 3. Tile (repeat the image until it fills the entire screen) */
+  /* Note: This is the default behaviour. No code required. */
+  
+  
+  /* This places the platform icon back to the bottom right, due to changing the element's height */
+  display: flex;
+  place-items: flex-end;
+  flex-direction: column-reverse;
+}
